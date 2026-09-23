@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Letter For You</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="message.html">MESSAGE</a>
+    </nav>
+
+
+    <!-- Message Section -->
+    <section class="message me" id="message">
+
+        <table class="message-table">
+            <tr>
+                <td class="message-cell">
+
+                    <h2>A Letter For You</h2>
+
+                    <p class="message-intro">
+                        Click the envelope to open your birthday message.
+                    </p>
+
+
+                    <!-- Envelope -->
+                    <div class="envelope-wrapper" id="envelopeWrapper">
+
+                        <div class="envelope" id="envelope">
+
+                            <div class="envelope-back"></div>
+
+                            <div class="fold-left"></div>
+                            <div class="fold-right"></div>
+
+                            <div class="front"></div>
+
+                            <div class="flap"></div>
+
+                            <div class="seal">♥</div>
+
+                        </div>
+
+                        <div class="instruction">
+                            ✉ Click the envelope
+                        </div>
+
+
+                        <!-- Letter -->
+                        <div class="letter-container" id="letterContainer">
+
+                            <div class="letter">
+
+                                <h3>For You ♡</h3>
+
+                                <div class="letter-content">
+
+                                    <p>
+                                        Happy birthday! I hope today reminds you
+                                        of how appreciated and loved you are.
+                                        You deserve a day filled with happiness,
+                                        laughter, and all the little things that
+                                        make you smile.
+                                    </p>
+
+                                    <p>
+                                        I wanted to write you something more than
+                                        just a simple birthday greeting. I hope
+                                        you know how much your presence can mean
+                                        to the people around you. Sometimes, even
+                                        the smallest moments can become memories
+                                        that stay with us for a long time.
+                                    </p>
+
+                                    <p>
+                                        Thank you for being someone who brings
+                                        your own kind of light into the lives of
+                                        others. I hope that this new chapter gives
+                                        you countless reasons to smile, grow,
+                                        dream, and be proud of yourself.
+                                    </p>
+
+                                    <p>
+                                        Whatever happens in the coming year, I
+                                        hope you continue being yourself. Keep
+                                        chasing the things that matter to you,
+                                        keep believing in your dreams, and never
+                                        forget that you are capable of more than
+                                        you sometimes realize.
+                                    </p>
+
+                                    <p>
+                                        Once again, happy birthday! May this year
+                                        bring you beautiful memories, peaceful
+                                        days, exciting opportunities, and plenty
+                                        of moments worth remembering.
+                                    </p>
+
+                                    <p class="signature">
+                                        With love,<br>
+                                        Your friend ♡
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="close-text">
+                                Scroll inside the letter to read everything ♡
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </td>
+            </tr>
+        </table>
+
+    </section>
+
+
+    <!-- Decorative Background -->
+    <div class="decorative-circle circleone"></div>
+    <div class="decorative-circle circletwo"></div>
+    <div class="decorative-circle circlethree"></div>
+
+
+    <!-- Footer -->
+    <footer class="footer1">
+        Made with love ♡
+    </footer>
+
+
+    <!-- Envelope Script -->
+    <script>
+        const wrapper = document.getElementById("envelopeWrapper");
+        const envelope = document.getElementById("envelope");
+
+        envelope.addEventListener("click", function () {
+
+            wrapper.classList.toggle("open");
+
+            if (wrapper.classList.contains("open")) {
+
+                setTimeout(() => {
+
+                    document.getElementById("letterContainer")
+                        .scrollIntoView({
+                            behavior: "smooth",
+                            block: "center"
+                        });
+
+                }, 300);
+
+            }
+        });
+    </script>
+
+</body>
+</html>
