@@ -1,0 +1,842 @@
+/* ==============================
+   GENERAL
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #315b64;
+    background: #eefbfa;
+    overflow-x: hidden;
+}
+
+
+/* ==============================
+   NAVIGATION
+============================== */
+
+.nav-links {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    padding: 18px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 2px solid #cceee8;
+}
+
+.nav-links a {
+    color: #39727a;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    padding: 8px 14px;
+    border-radius: 20px;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+    background: #7fcfc2;
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   MAIN SECTION
+============================== */
+
+.you {
+    position: relative;
+
+    min-height: calc(100vh - 65px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px 20px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #d8f4f3 0%,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 30%,
+            #dff5e9 0%,
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #eaf9ff,
+            #e9f8f1,
+            #f2fcfb
+        );
+}
+
+
+/* ==============================
+     CARD
+============================== */
+
+.you-content {
+    position: relative;
+    z-index: 5;
+
+    width: min(700px, 92%);
+
+    padding: 65px 35px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 35px;
+
+    box-shadow:
+        0 20px 50px rgba(91, 157, 155, 0.15);
+
+    backdrop-filter: blur(12px);
+}
+
+
+/* ==============================
+   BALLOONS
+============================== */
+
+.balloons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+.balloons span {
+    display: inline-block;
+
+    font-size: 58px;
+
+    animation:
+        float 3s ease-in-out infinite;
+}
+
+.balloons span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.balloons span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.balloons span:nth-child(3) {
+    animation-delay: 1s;
+}
+
+
+/* Balloon movement */
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-22px) rotate(3deg);
+    }
+}
+
+
+/* ==============================
+   TITLE
+============================== */
+
+.hero h1 {
+    margin-bottom: 18px;
+
+    color: #4b8990;
+
+    font-size: clamp(42px, 8vw, 76px);
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        3px 3px 0 #cceee8;
+}
+
+
+/* ==============================
+   SUBTITLE
+============================== */
+
+.subtitle {
+    color: #60949a;
+
+    font-size: 18px;
+    line-height: 1.6;
+
+    margin: 0 auto 30px;
+}
+
+
+/* ==============================
+   CAKE
+============================== */
+
+.cake {
+    display: inline-block;
+
+    font-size: 75px;
+
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* ==============================
+    BILOG
+============================== */
+
+.decorative-circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    opacity: 0.55;
+
+    z-index: 1;
+}
+
+.circle-one {
+    width: 180px;
+    height: 180px;
+
+    top: 8%;
+    left: -50px;
+
+    background: #bde9e2;
+}
+
+.circle-two {
+    width: 230px;
+    height: 230px;
+
+    bottom: -70px;
+    right: -60px;
+
+    background: #ccebd9;
+}
+
+.circle-three {
+    width: 90px;
+    height: 90px;
+
+    top: 25%;
+    right: 12%;
+
+    background: #c8edf4;
+}
+
+/* ==============================
+   MESSAGE BACKGROUND
+============================== */
+
+.message {
+    min-height: calc(100vh - 65px);
+    padding: 70px 20px;
+
+    position: relative;
+    z-index: 2;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            #ffd9e6 0%,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 30%,
+            #ffe4ec 0%,
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #fff0f5,
+            #ffe8ef,
+            #fff5f8
+        );
+}
+
+
+/* ==============================
+   MESSAGE TABLE
+============================== */
+
+.message-table {
+    width: min(850px, 95%);
+    margin: 0 auto;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    border: 2px solid #ffd1df;
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 50px rgba(210, 100, 130, 0.15);
+
+    backdrop-filter: blur(12px);
+}
+
+.message-cell {
+    padding: 55px 30px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+
+/* ==============================
+   TITLE
+============================== */
+
+.message-cell h2 {
+    margin-bottom: 12px;
+
+    color: #c65d7c;
+
+    font-size: clamp(32px, 6vw, 50px);
+
+    text-shadow:
+        2px 2px 0 #ffd4e1;
+}
+
+.message-intro {
+    margin-bottom: 40px;
+
+    color: #a9687a;
+
+    font-size: 16px;
+}
+
+
+/* ==============================
+   ENVELOPE
+============================== */
+
+.envelope-wrapper {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.envelope {
+    position: relative;
+
+    width: 330px;
+    height: 220px;
+
+    cursor: pointer;
+
+    margin: 20px auto;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+
+    filter:
+        drop-shadow(
+            0 15px 15px rgba(190, 80, 110, 0.18)
+        );
+}
+
+.envelope:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Envelope back */
+
+.envelope-back {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background: #f7b8ca;
+
+    border-radius: 8px;
+
+    z-index: 1;
+}
+
+
+/* Front */
+
+.front {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 165px solid transparent;
+    border-right: 165px solid transparent;
+    border-bottom: 125px solid #e994ae;
+
+    z-index: 4;
+}
+
+
+/* Left fold */
+
+.fold-left {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+
+    border-top: 110px solid transparent;
+    border-left: 165px solid #f2a9bd;
+
+    z-index: 3;
+}
+
+
+/* Right fold */
+
+.fold-right {
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+
+    border-top: 110px solid transparent;
+    border-right: 165px solid #f2a9bd;
+
+    z-index: 3;
+}
+
+
+/* ==============================
+   ENVELOPE FLAP
+============================== */
+
+.flap {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 165px solid transparent;
+    border-right: 165px solid transparent;
+    border-top: 120px solid #ffd1df;
+
+    transform-origin: top center;
+
+    z-index: 6;
+
+    transition:
+        transform 0.7s ease,
+        z-index 0s linear 0.35s;
+}
+
+
+/* ==============================
+   HEART SEAL
+============================== */
+
+.seal {
+    position: absolute;
+
+    top: 90px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #d85f82;
+
+    color: white;
+
+    font-size: 23px;
+
+    box-shadow:
+        0 5px 12px rgba(190, 80, 110, 0.2);
+
+    z-index: 8;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* ==============================
+   INSTRUCTION
+============================== */
+
+.instruction {
+    margin-top: 5px;
+
+    color: #b2637a;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* ==============================
+   OPEN ENVELOPE
+============================== */
+
+.envelope-wrapper.open .flap {
+    transform: rotateX(180deg);
+    z-index: 0;
+}
+
+.envelope-wrapper.open .seal {
+    opacity: 0;
+
+    transform:
+        translateX(-50%)
+        scale(0.5);
+}
+
+.envelope-wrapper.open .instruction {
+    opacity: 0;
+}
+
+
+/* ==============================
+   LETTER
+============================== */
+
+.letter-container {
+    display: none;
+
+    width: min(650px, 95%);
+
+    margin: 35px auto 0;
+
+    animation: letterAppear 0.6s ease;
+}
+
+.envelope-wrapper.open .letter-container {
+    display: block;
+}
+
+@keyframes letterAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==============================
+   LETTER PAPER
+============================== */
+
+.letter {
+    height: 400px;
+
+    padding: 35px;
+
+    overflow-y: auto;
+
+    text-align: left;
+
+    background: #fffafb;
+
+    border: 2px solid #f4c2d2;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 35px rgba(190, 80, 110, 0.12);
+}
+
+.letter h3 {
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    color: #c65d7c;
+
+    font-size: 28px;
+}
+
+.letter-content p {
+    margin-bottom: 18px;
+
+    color: #805967;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+.signature {
+    margin-top: 30px;
+
+    text-align: right;
+
+    color: #c65d7c !important;
+
+    font-weight: bold;
+}
+
+
+/* ==============================
+   LETTER SCROLLBAR
+============================== */
+
+.letter::-webkit-scrollbar {
+    width: 8px;
+}
+
+.letter::-webkit-scrollbar-track {
+    background: #fff0f5;
+
+    border-radius: 10px;
+}
+
+.letter::-webkit-scrollbar-thumb {
+    background: #efabc0;
+
+    border-radius: 10px;
+}
+
+
+/* ==============================
+   CLOSE TEXT
+============================== */
+
+.close-text {
+    margin-top: 12px;
+
+    color: #b97889;
+
+    font-size: 12px;
+}
+
+
+/* ==============================
+   DECORATIVE CIRCLES
+============================== */
+
+.decorative-circle {
+    position: fixed;
+
+    border-radius: 50%;
+
+    opacity: 0.5;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+.circleone {
+    width: 180px;
+    height: 180px;
+
+    left: -60px;
+    top: 25%;
+
+    background: #ffc9d9;
+}
+
+.circletwo {
+    width: 220px;
+    height: 220px;
+
+    right: -70px;
+    bottom: 5%;
+
+    background: #ffdce7;
+}
+
+.circlethree {
+    width: 85px;
+    height: 85px;
+
+    right: 15%;
+    top: 20%;
+
+    background: #f8bfd1;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+.footer1 {
+    position: relative;
+    z-index: 5;
+
+    padding: 20px;
+
+    text-align: center;
+
+    color: #a9687a;
+
+    background: #ffe5ed;
+
+    border-top: 1px solid #f6c8d7;
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 600px) {
+
+    .message {
+        padding: 40px 10px;
+    }
+
+    .message-cell {
+        padding: 40px 15px;
+    }
+
+    .envelope {
+        width: 280px;
+        height: 185px;
+    }
+
+    .front {
+        border-left-width: 140px;
+        border-right-width: 140px;
+        border-bottom-width: 105px;
+    }
+
+    .fold-left {
+        border-left-width: 140px;
+        border-top-width: 95px;
+    }
+
+    .fold-right {
+        border-right-width: 140px;
+        border-top-width: 95px;
+    }
+
+    .flap {
+        border-left-width: 140px;
+        border-right-width: 140px;
+        border-top-width: 105px;
+    }
+
+    .seal {
+        top: 75px;
+    }
+
+    .letter {
+        height: 350px;
+        padding: 25px 20px;
+    }
+
+    .letter-content p {
+        font-size: 14px;
+    }
+}
+/* ==============================
+   FOOTER
+============================== */
+
+.footer {
+    position: relative;
+    z-index: 5;
+
+    padding: 20px;
+
+    text-align: center;
+
+    color: #67979a;
+
+    background: #d8fff5;
+
+    border-top: 1px solid #cceee8;
+}
+
